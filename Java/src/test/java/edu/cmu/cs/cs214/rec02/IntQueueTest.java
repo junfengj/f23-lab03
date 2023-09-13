@@ -45,6 +45,11 @@ public class IntQueueTest {
     }
 
     @Test
+    public void testDequeueEmptyQueue() {
+        assertNull(mQueue.dequeue());
+    }
+
+    @Test
     public void testNotEmpty() {
         mQueue.enqueue(1);
         assertFalse(mQueue.isEmpty());
